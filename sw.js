@@ -1,6 +1,6 @@
 /* Service worker de TRAZZO: guarda la app para usarla sin conexión */
-const CACHE = 'trazzo-v1';
-const SHELL = ['./','index.html','css/styles.css','js/app.js','manifest.json','icons/icon-192.png','icons/icon-512.png','media/placeholder.svg'];
+const CACHE = 'trazzo-v2';
+const SHELL = ['./','index.html','css/styles.css','js/app.js','manifest.json','icons/icon-192.png','icons/icon-512.png','media/placeholder.svg','media/1.jpeg','media/2.jpeg','media/3.jpeg'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));

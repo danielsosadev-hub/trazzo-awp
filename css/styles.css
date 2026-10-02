@@ -22,8 +22,11 @@ nav a{color:inherit;text-decoration:none;padding:.5rem .65rem;font-size:.95rem;b
 nav a:hover,nav a:focus-visible{background:rgba(255,255,255,.18);outline:none}
 .menu-btn{display:none;background:none;border:2px solid currentColor;color:inherit;border-radius:8px;padding:.35rem .7rem;font-size:1.1rem;cursor:pointer}
 /* ========== 4. Hero y tarjetas ========== */
-.hero{background:linear-gradient(135deg,var(--brand),#8f0a20);color:#fff;padding:3.5rem 0}
+.hero{background:linear-gradient(115deg,#a90d29 0%,var(--brand) 58%,#dc3b45 100%);color:#fff;padding:3.5rem 0}
 .hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+.hero h1{font-family:"Bahnschrift Condensed","Arial Narrow",Impact,sans-serif;max-width:15ch}
+.hero-kicker{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;opacity:.78}
+.hero-image{width:100%;max-height:420px;object-fit:contain;object-position:center;background:#fff;border:5px solid rgba(255,255,255,.86);box-shadow:14px 14px 0 rgba(32,20,20,.2)}
 .hero p{opacity:.92;max-width:55ch}
 .btn{display:inline-block;background:var(--brand);color:#fff;border:0;font:inherit;font-weight:700;padding:.7rem 1.3rem;border-radius:10px;text-decoration:none;cursor:pointer}
 .btn:hover{filter:brightness(1.12)}.hero .btn{background:#fff;color:#c8102e}
@@ -56,7 +59,7 @@ form.add .btn{align-self:end}
 .media{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
 .media video{width:100%;border-radius:var(--radius);background:#000;aspect-ratio:16/9}
 .fleet{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.2rem}
-.fleet figure{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.fleet figure{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden}
 .fleet figcaption{padding:.8rem 1rem;font-size:.92rem;color:var(--muted)}
 .fleet figcaption b{display:block;color:var(--text)}
 /* ========== 7. Pie de página ========== */
@@ -79,4 +82,5 @@ nav a[aria-current="page"]{background:rgba(255,255,255,.22)}
 .page-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1rem}
 .msg{padding:.8rem 1rem;border-radius:8px;background:var(--surface);border:1px solid var(--border);color:var(--muted);margin-top:1rem}
 .crumbs{font-size:.9rem;color:var(--muted);margin-bottom:.5rem}.crumbs a{color:var(--primary)}
-.fleet img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--border)}
+.fleet img{width:100%;aspect-ratio:4/5;object-fit:contain;display:block;background:#fff}
+@media(max-width:600px){.hero{padding:2.5rem 0}.hero-image{max-height:340px;box-shadow:8px 8px 0 rgba(32,20,20,.2)}}

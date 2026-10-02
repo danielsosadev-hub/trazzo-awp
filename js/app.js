@@ -22,7 +22,6 @@ const SEED={
  asignaciones:[]
 };
 const KEY="trazzo-datos-v2";
-let data=load();
 
 /* ========== Utilidades ========== */
 const $=id=>document.getElementById(id);
@@ -36,6 +35,7 @@ const find=(k,id)=>data[k].find(r=>r.id===id);
 const label=(k,id)=>{const r=find(k,id);return r?esc(M[k].name(r)):"—"};
 const opts=(k,list)=>list.map(r=>`<option value="${r.id}">${esc(M[k].name(r))}</option>`).join("");
 function setEstado(k,id,e){const r=find(k,id);if(r)r.estado=e}
+let data=load();
 
 /* ========== Vistas ========== */
 function tableHTML(k,q=""){

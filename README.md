@@ -10,7 +10,7 @@ js/app.js         Datos, páginas, enrutador y eventos
 manifest.json     Datos de instalación de la PWA
 sw.js             Service worker (uso sin conexión)
 icons/            Íconos de la app
-media/            1.mp4 (video) y 1.jpg, 2.jpg, 3.jpg (imágenes)  <- coloca aquí tus archivos
+media/            1.mp4 (video) y 1.jpeg, 2.jpeg, 3.jpeg (imágenes)
 ```
 
 ## Probar en local
