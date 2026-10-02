@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TRAZZO – Gestión de transporte de carga</title>
+<meta name="theme-color" content="#c8102e">
+<meta name="description" content="TRAZZO: gestión de unidades, rutas, operadores y clientes de transporte de carga.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="TRAZZO">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ENCABEZADO -->
+<header>
+  <div class="container bar">
+    <a class="brand" href="#/" aria-label="TRAZZO, inicio">
+      <svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="10" fill="#fff"/><path d="M6 30V16h20v14zM26 20h8l6 6v4H26z" fill="#c8102e"/><circle cx="14" cy="32" r="4" fill="#fff" stroke="#c8102e" stroke-width="2"/><circle cx="34" cy="32" r="4" fill="#fff" stroke="#c8102e" stroke-width="2"/></svg>
+      TRAZZO
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">☰</button>
+    <nav id="menu" aria-label="Principal"><ul><li><a href="#/" data-r="inicio">Inicio</a></li><li><a href="#/unidades" data-r="unidades">Unidades</a></li><li><a href="#/rutas" data-r="rutas">Rutas</a></li><li><a href="#/operadores" data-r="operadores">Operadores</a></li><li><a href="#/clientes" data-r="clientes">Clientes</a></li><li><a href="#/prestadores" data-r="prestadores">Prestadores</a></li><li><a href="#/asignaciones" data-r="asignaciones">Asignaciones</a></li></ul></nav>
+  </div>
+</header>
+
+<main id="app" tabindex="-1"></main>
+
+<!-- PIE DE PÁGINA -->
+<footer id="contacto">
+  <div class="container">
+    <div class="foot">
+      <div><h3>TRAZZO</h3><p>Gestión integral para empresas de transporte de carga.</p></div>
+      <div><h3>Contacto</h3><p>contacto@trazzo.example<br>Tel. 222 000 0000<br>Puebla, México</p></div>
+      <div><h3>Páginas</h3><p><a href="#/unidades">Unidades</a> · <a href="#/rutas">Rutas</a><br><a href="#/operadores">Operadores</a> · <a href="#/clientes">Clientes</a><br><a href="#/asignaciones">Asignaciones</a></p></div>
+    </div>
+    <small>© 2026 TRAZZO. Proyecto académico con datos de ejemplo.</small>
+  </div>
+</footer>
+
+<template id="t-inicio">
+<section class="hero" >
+  <div class="container grid">
+    <div>
+      <h1>Controla toda tu operación de carga en un solo lugar</h1>
+      <p>TRAZZO es un sistema para administrar unidades, rutas, operadores, prestadores de servicio y clientes de una empresa de transporte de mercancías con tractocamiones Thorton, remolques T-53 y camionetas.</p>
+      <p><a class="btn" href="#/asignaciones">Asignar un viaje</a></p>
+    </div>
+    <svg viewBox="0 0 400 220" role="img" aria-label="Ilustración de un tractocamión con remolque en carretera">
+      <rect y="170" width="400" height="50" fill="#8f0a20"/>
+      <path d="M0 195h400" stroke="#fff" stroke-width="4" stroke-dasharray="26 18"/>
+      <rect x="20" y="70" width="215" height="90" rx="6" fill="#fff"/>
+      <text x="127" y="123" text-anchor="middle" font-family="sans-serif" font-weight="800" font-size="26" fill="#c8102e">T-53</text>
+      <path d="M245 100h55l35 35v25H245z" fill="#ffd9dd"/><path d="M285 108h12l22 22h-34z" fill="#c8102e"/>
+      <circle cx="70" cy="165" r="17" fill="#1b2433"/><circle cx="130" cy="165" r="17" fill="#1b2433"/><circle cx="195" cy="165" r="17" fill="#1b2433"/><circle cx="305" cy="165" r="17" fill="#1b2433"/>
+    </svg>
+  </div>
+</section>
+<section><div class="container"><h2>Módulos del sistema</h2><p class="lead">Cada módulo tiene su propia página para registrar y consultar información.</p><div class="cards" id="mods"></div></div></section>
+<section><div class="container"><h2>Panel de resumen</h2><p class="lead">Los indicadores se actualizan al registrar, asignar o finalizar viajes.</p><div class="cards" id="kpis"></div></div></section>
+<section id="video">
+  <div class="container">
+    <h2>Nuestra flota y operación</h2>
+    <div class="media">
+      <div>
+        <video id="player" controls preload="metadata" poster="media/1.jpg">
+          <source src="media/1.mp4" type="video/mp4">
+          Tu navegador no admite video HTML5.
+        </video>
+        
+      </div>
+      <div>
+        <p class="lead">Un seguimiento ordenado de la flota reduce paros por mantenimiento, evita retrasos en las entregas y mejora la comunicación con el cliente. Con este sistema, el equipo de operaciones consulta en segundos qué unidad y qué operador están disponibles.</p>
+        
+      </div>
+    </div>
+    <div class="fleet">
+      <figure><img src="media/1.jpg" alt="Tractocamión Thorton" width="480" height="270" loading="lazy" onerror="this.onerror=null;this.src='media/placeholder.svg'"><figcaption><b>Tractocamión Thorton</b>Tracción para largas distancias.</figcaption></figure>
+      <figure><img src="media/2.jpg" alt="Remolque T-53" width="480" height="270" loading="lazy" onerror="this.onerror=null;this.src='media/placeholder.svg'"><figcaption><b>Remolque T-53</b>Caja de 53 pies para carga general.</figcaption></figure>
+      <figure><img src="media/3.jpg" alt="Camioneta de reparto" width="480" height="270" loading="lazy" onerror="this.onerror=null;this.src='media/placeholder.svg'"><figcaption><b>Camioneta</b>Entregas urbanas y cargas ligeras.</figcaption></figure>
+    </div>
+  </div>
+</section>
+</template>
+
+<script src="js/app.js"></script>
+</body>
+</html>
